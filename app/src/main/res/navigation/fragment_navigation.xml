@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/filmSearchingFragment"
+        android:name="com.example.sinemalar.view.FilmSearchingFragment"
+        android:label="fragment_film_searching"
+        tools:layout="@layout/fragment_film_searching" >
+        <action
+            android:id="@+id/action_filmSearchingFragment_to_filmShowingFragment"
+            app:destination="@id/filmShowingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/filmShowingFragment"
+        android:name="com.example.sinemalar.view.FilmShowingFragment"
+        android:label="FilmShowingFragment" >
+        <action
+            android:id="@+id/action_filmShowingFragment_to_filmSearchingFragment"
+            app:destination="@id/filmSearchingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="filmName"
+            app:argType="string"
+            android:defaultValue="Filmler" />
+        <argument
+            android:name="filmPoster"
+            app:argType="string"
+            android:defaultValue="Film" />
+        <argument
+            android:name="filmGenre"
+            app:argType="string"
+            android:defaultValue="Genre" />
+        <argument
+            android:name="filmPlot"
+            app:argType="string"
+            android:defaultValue="FilmDesc" />
+        <argument
+            android:name="filmImdb"
+            app:argType="string"
+            android:defaultValue="7.0" />
+        <argument
+            android:name="filmAwards"
+            app:argType="string"
+            android:defaultValue="0 awards" />
+        <argument
+            android:name="filmActors"
+            app:argType="string"
+            android:defaultValue="Tolga Çevik" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.sinemalar.view.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_filmSearchingFragment"
+            app:destination="@id/filmSearchingFragment" />
+    </fragment>
+</navigation>

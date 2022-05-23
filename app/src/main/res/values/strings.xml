@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sinemalar</string>
+
+    <string name="SplashScreen">MOVIES</string>
+
+    <string name="filmSearchingError">Error! Try Again</string>
+
+    <string name="filmGenre">Film Türü</string>
+    <string name="filmImdb">Imdb: 7.0</string>
+    <string name="filmPlot">Film Açıklaması</string>
+    <string name="filmActors">Filmin Oyuncuları</string>
+    <string name="filmAwards">Filmin Kazandığı Ödüller</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
